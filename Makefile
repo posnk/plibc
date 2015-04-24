@@ -36,7 +36,9 @@ ARFLAGS = rcs
 LIBS = -lgcc
 
 # define the C source files
-OBJS = 
+OBJS = $(BUILDDIR)stdlib/base64.o \
+	$(BUILDDIR)stdlib/math.o \
+	$(BUILDDIR)stdlib/strtoint.o \
 #$(BUILDDIR)file.o \
 	
 # define the C object files 

@@ -17,7 +17,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 \******************************************************************************/
 
 /**
- * @file path/file.c
+ * @file mach/plcint.h
  *
  * Part of plibc
  *
@@ -25,4 +25,19 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
  */
 
+#ifndef __plcint__
+#define __plcint__
+
 #include <plcconfig.h>
+
+#ifdef __i386
+
+#include <mach/i386/plcint.h>
+
+#else
+
+#error "Unknown Platform!"
+
+#endif
+
+#endif

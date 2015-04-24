@@ -17,7 +17,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 \******************************************************************************/
 
 /**
- * @file path/file.c
+ * @file ctype.h
  *
  * Part of plibc
  *
@@ -25,4 +25,15 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
  */
 
+#ifndef __ctype__
+#define __ctype__
+
 #include <plcconfig.h>
+#include <mach/plcint.h>
+
+//TODO: Implement ctype
+
+#define isspace(CHAR)		((CHAR <= ' ')) 
+
+
+#endif

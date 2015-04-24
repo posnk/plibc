@@ -36,7 +36,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 /** strtod - convert string to a double-precision number */
 double		strtod	( const char *str, char **endptr)
 {
-	//TODO: Implement
+	//TODO: Implement strtod
 	return 0.0;
 }
 
@@ -299,7 +299,7 @@ unsigned long int
 }
 
 /** atoi - convert a string to integer */
-int		atoi	( const char *str )
+int			atoi	( const char *str )
 {
 
 	long int	result;

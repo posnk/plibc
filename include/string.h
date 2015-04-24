@@ -17,7 +17,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 \******************************************************************************/
 
 /**
- * @file path/file.c
+ * @file stddef.h
  *
  * Part of plibc
  *
@@ -25,4 +25,24 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
  */
 
+#ifndef __stddef__
+#define __stddef__
+
 #include <plcconfig.h>
+#include <mach/plcint.h>
+
+/** Null pointer constant. */
+#define NULL		( (void *) 0)
+
+/** Offset of structure member*/
+#define	offsetof(TYPE, MEMBER) ((size_t) (&(((TYPE *) 0)->MEMBER)))
+
+/** Signed integral type of the result of subtracting two pointers. */
+typedef __plc_saddr_t		ptrdiff_t;
+
+/** Unsigned integral type of the result of the sizeof operator. */
+typedef __plc_uaddr_t		size_t;
+
+typedef __plc_uint32_t		wchar_t;
+
+#endif

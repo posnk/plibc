@@ -17,7 +17,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 \******************************************************************************/
 
 /**
- * @file path/file.c
+ * @file mach/i386/plcint.h
  *
  * Part of plibc
  *
@@ -25,4 +25,22 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
  */
 
+#ifndef __plcint__
+#define __plcint__
+
 #include <plcconfig.h>
+
+typedef 	unsigned char		__plc_uint8_t;
+typedef 	unsigned short		__plc_uint16_t;
+typedef 	unsigned int		__plc_uint32_t;
+typedef 	unsigned long long	__plc_uint64_t;
+
+typedef 	signed char			__plc_sint8_t;
+typedef 	signed short		__plc_sint16_t;
+typedef 	signed int			__plc_sint32_t;
+typedef 	signed long long	__plc_sint64_t;
+
+typedef 	unsigned int		__plc_uaddr_t;
+typedef 	signed int			__plc_saddr_t;
+
+#endif

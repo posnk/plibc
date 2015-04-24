@@ -28,6 +28,24 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #ifndef __plcconfig__
 #define __plcconfig__
 
-#define PLIBC_VERSION	("plibc-0.1")
+#define PLIBC_VERSION		("plibc-0.1")
+
+#define PLIBC_LOCALE_CHAR_SIZE	(1)
+
+#define PLIBC_STRTOINT_EMPTY_IS_EINVAL
+
+#undef PLIBC_HAVE_FLOATCONV
+
+#ifdef PLIBC_FREESTANDING
+
+#undef PLIBC_HAVE_PROCESS_MGMT
+#undef PLIBC_HAVE_SYS_WAIT
+
+#else
+
+#define PLIBC_HAVE_PROCESS_MGMT
+#define PLIBC_HAVE_SYS_WAIT
+
+#endif
 
 #endif
