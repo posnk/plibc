@@ -17,7 +17,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 \******************************************************************************/
 
 /**
- * @file stddef.h
+ * @file string.h
  *
  * Part of plibc
  *
@@ -25,24 +25,78 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
  */
 
-#ifndef __stddef__
-#define __stddef__
+#ifndef __string__
+#define __string__
 
 #include <plcconfig.h>
 #include <mach/plcint.h>
 
-/** Null pointer constant. */
-#define NULL		( (void *) 0)
+#include <stddef.h>
 
-/** Offset of structure member*/
-#define	offsetof(TYPE, MEMBER) ((size_t) (&(((TYPE *) 0)->MEMBER)))
+/** memccpy - copy bytes in memory */
+void *		memccpy	(void *dest,		const void *src,	int c,	size_t n);
 
-/** Signed integral type of the result of subtracting two pointers. */
-typedef __plc_saddr_t		ptrdiff_t;
+/** memchr - find byte in memory */
+void *		memchr	(					const void *src,	int c,	size_t n);
 
-/** Unsigned integral type of the result of the sizeof operator. */
-typedef __plc_uaddr_t		size_t;
+/** memcmp - compare bytes in memory */
+int			memcmp	(const void *s1,	const void *s2, 			size_t n);
 
-typedef __plc_uint32_t		wchar_t;
+/** memcpy - copy bytes in memory */
+void *		memcpy	(void *dest,		const void *src, 			size_t n);
 
+/** memmove - copy bytes in memory with overlapping areas */
+void *		memmove	(void *dest,		const void *src, 			size_t n);
+
+/** memset - set bytes in memory */
+void *		memset	(void *dest,							int c,	size_t n);
+	
+/** strcat - concatenate two strings */
+char *		strcat	(char *dest,		const char *src						);
+	
+/** strchr - string scanning operation */
+char *		strchr	(					const char *src,	int c			);
+
+/** strcmp - compare two strings */
+int			strcmp	(const char *s1,	const char *s2						);
+
+/** strcpy - copy a string */
+char *		strcpy	(void *dest,		const char *src, 					);
+
+//TODO: Add strcoll
+
+//TODO: Add strcspn, strspn
+
+/** strdup - duplicate a string */
+void *		strdup	(const char *src										);
+
+/** strerror - get error message string */
+char *		strerror(int errnum												);
+	
+/** strlen - get string length */
+size_t		strlen	(const char *src										);
+	
+/** strncat - concatenate two strings */
+char *		strncat	(char *dest,		const char *src,			size_t n);
+
+/** strncmp - compare two strings */
+int			strncmp	(const char *s1,	const char *s2				size_t n);
+
+/** strncpy - copy a string */
+char *		strncpy	(void *dest,		const char *src, 			size_t n);
+	
+/** strchr - string scanning operation */
+char *		strrchr	(					const char *src,	int c			);
+
+//TODO: Add strpbrk
+
+//TODO: Add strstr
+
+/** strtok, strtok_r - split string into tokens */
+char *		strtok	(char *s,			const char *delim					);
+char *		strtok_r(char *s,			const char *delim					);
+
+//TODO: Add strxfrm
+	
+	
 #endif
