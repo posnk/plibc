@@ -64,8 +64,13 @@ int             strcmp	(const char *s1,   const char *s2                  );
 char *		strcpy	(      char *dest, const char *src                 );
 
 //TODO: Add strcoll
+#define		strcoll	strcmp
 
-//TODO: Add strcspn, strspn
+/** strspn - get number of prefix chars in accept */
+int             strspn	(const char *s1,   const char *accept              );
+
+/** strcspn - get number of prefix chars not in reject */
+int             strcspn	(const char *s1,   const char *reject              );
 
 /** strdup - duplicate a string */
 void *		strdup	(                  const char *src                 );
