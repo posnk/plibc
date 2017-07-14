@@ -39,6 +39,17 @@ LIBS = -lgcc
 OBJS = $(BUILDDIR)stdlib/base64.o \
 	$(BUILDDIR)stdlib/math.o \
 	$(BUILDDIR)stdlib/strtoint.o \
+	$(BUILDDIR)string/memcpy.o \
+	$(BUILDDIR)string/memcmp.o \
+	$(BUILDDIR)string/memmove.o \
+	$(BUILDDIR)string/memset.o \
+	$(BUILDDIR)string/memchr.o \
+	$(BUILDDIR)string/strcpy.o \
+	$(BUILDDIR)string/strcmp.o \
+	$(BUILDDIR)string/strlen.o \
+	$(BUILDDIR)string/strchr.o \
+#	$(BUILDDIR)nonstd/numfmt.o \
+#	$(BUILDDIR)stdio/printf.o \
 #$(BUILDDIR)file.o \
 	
 # define the C object files 
@@ -65,7 +76,8 @@ install: $(BUILDDIR)$(PROGNAME)
 # it uses automatic variables $<: the name of the prerequisite of
 # the rule(a .c file) and $@: the name of the target of the rule (a .o file) 
 # (see the gnu make manual section about automatic variables)
-$(BUILDDIR)%.o: %.c
+$(BUILDDIR)%.o: src/%.c
+	@cd src/;find -type d -links 2 -exec mkdir -p "$(BUILDDIR){}" \; 2> /dev/null
 	$(CC) $(CFLAGS) $(INCLUDES) -c $<  -o $@
 
 clean:

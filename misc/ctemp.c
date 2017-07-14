@@ -1,5 +1,5 @@
 /******************************************************************************\
-Copyright (C) 2015 Peter Bosch
+Copyright (C) 2017 Peter Bosch
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License

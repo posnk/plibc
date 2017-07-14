@@ -36,8 +36,8 @@ int		memcmp	(const void *s1,   const void *s2,         size_t n)
 	int r;
 	
 	//TODO: Verify the behaviour for systems where sizeof(char) != 1 byte
-	_s = src;
-	_d = dest;
+	_s1 = s1;
+	_s2 = s2;
 	
 	r = 0;
 	

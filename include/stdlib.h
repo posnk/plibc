@@ -31,12 +31,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 #ifndef PLIBC_FREESTANDING
 
-	/** Unsuccessful termination for exit(), evaluates to a 
-	    non-zero value. */
-#	define EXIT_FAILURE		(-1)
+/** Unsuccessful termination for exit(), evaluates to a non-zero value. */
+#define EXIT_FAILURE		(-1)
 
-	/** Successful termination for exit(), evaluates to 0. */
-#	define EXIT_SUCCESS		(0)
+/** Successful termination for exit(), evaluates to 0. */
+#define EXIT_SUCCESS		(0)
 
 #endif
 
@@ -52,8 +51,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 #ifdef PLIBC_HAVE_SYS_WAIT
 
-	/* For system() */
-	#include <sys/wait.h>
+/* For system() */
+#include <sys/wait.h>
 
 #endif
 

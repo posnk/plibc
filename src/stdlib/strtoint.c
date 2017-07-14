@@ -64,7 +64,7 @@ long int	strtol	( const char *str, char **endptr, int base )
 {
 
 	int		ptr, nptr;
-	long int	result, sgn, mv, cv;
+	long int	result, sgn, mv, cv, ch;
 
 	ptr =  0;
 
@@ -99,7 +99,7 @@ long int	strtol	( const char *str, char **endptr, int base )
 	if ( ( base == 0 ) && ( str[ ptr ] == '0' ) ) {
 
 		if ( str[ ptr + 1 ] == 'x') {
-			bas	 = 16;
+			base	 = 16;
 			ptr	+=  2;
 		} else {
 			base	 =  8;
@@ -174,7 +174,7 @@ long int	strtol	( const char *str, char **endptr, int base )
 #endif
 	
 	if ( endptr )
-		*endptr = &(str[pos]);
+		*endptr = str + ptr;
 
 	return result;
 
@@ -187,6 +187,7 @@ unsigned long int
 
 	int			ptr, nptr;
 	unsigned long int	result, mv, cv;
+	char			ch;
 
 	ptr =  0;
 
@@ -217,7 +218,7 @@ unsigned long int
 	if ( ( base == 0 ) && ( str[ ptr ] == '0' ) ) {
 
 		if ( str[ ptr + 1 ] == 'x') {
-			bas	 = 16;
+			base	 = 16;
 			ptr	+=  2;
 		} else {
 			base	 =  8;
@@ -292,7 +293,7 @@ unsigned long int
 #endif
 	
 	if ( endptr )
-		*endptr = &(str[pos]);
+		*endptr = str + ptr;
 
 	return result;
 
