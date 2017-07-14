@@ -49,7 +49,7 @@ void *		memcpy	(      void *dest, const void *src,        size_t n);
 void *		memmove	(      void *dest, const void *src,        size_t n);
 
 /** memset - set bytes in memory */
-void *		memset	       void *dest,                  int c, size_t n);
+void *		memset	(      void *dest,                  int c, size_t n);
 	
 /** strcat - concatenate two strings */
 char *		strcat	(      char *dest, const char *src                 );
@@ -61,7 +61,7 @@ char *		strchr	(                  const char *src, int c	   );
 int             strcmp	(const char *s1,   const char *s2                  );
 
 /** strcpy - copy a string */
-char *		strcpy	(      void *dest, const char *src                 );
+char *		strcpy	(      char *dest, const char *src                 );
 
 //TODO: Add strcoll
 
