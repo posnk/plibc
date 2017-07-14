@@ -29,7 +29,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include <string.h>
 
 /** memcmp - compare bytes in memory */
-int		memcmp	(const void *s1,   const void *s2,         size_t n);
+int		memcmp	(const void *s1,   const void *s2,         size_t n)
 {	
 	const char *_s1, *_s2;
 	size_t p;

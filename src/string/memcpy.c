@@ -29,7 +29,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include <string.h>
 
 /** memcpy - copy bytes in memory */
-void *		memcpy	(      void *dest, const void *src,        size_t n);
+void *		memcpy	(      void *dest, const void *src,        size_t n)
 {	
 	const char *_s;
 	char *_d;
