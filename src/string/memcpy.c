@@ -40,7 +40,7 @@ void *		memcpy	(      void *dest, const void *src,        size_t n)
 	_d = dest;
 	
 	for ( p = 0; p < n; p++ )
-		_s[ p ] = _d[ p ];
+		_d[ p ] = _s[ p ];
 		
 	return dest;
 
