@@ -34,59 +34,59 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include <stddef.h>
 
 /** memccpy - copy bytes in memory */
-void *		memccpy	(void *dest,		const void *src,	int c,	size_t n);
+void *		memccpy	(void *dest,       const void *src, int c, size_t n);
 
 /** memchr - find byte in memory */
-void *		memchr	(					const void *src,	int c,	size_t n);
+void *		memchr	(	           const void *src, int c, size_t n);
 
 /** memcmp - compare bytes in memory */
-int			memcmp	(const void *s1,	const void *s2, 			size_t n);
+int		memcmp	(const void *s1,   const void *s2,         size_t n);
 
 /** memcpy - copy bytes in memory */
-void *		memcpy	(void *dest,		const void *src, 			size_t n);
+void *		memcpy	(      void *dest, const void *src,        size_t n);
 
 /** memmove - copy bytes in memory with overlapping areas */
-void *		memmove	(void *dest,		const void *src, 			size_t n);
+void *		memmove	(      void *dest, const void *src,        size_t n);
 
 /** memset - set bytes in memory */
-void *		memset	(void *dest,							int c,	size_t n);
+void *		memset	       void *dest,                  int c, size_t n);
 	
 /** strcat - concatenate two strings */
-char *		strcat	(char *dest,		const char *src						);
+char *		strcat	(      char *dest, const char *src                 );
 	
 /** strchr - string scanning operation */
-char *		strchr	(					const char *src,	int c			);
+char *		strchr	(                  const char *src, int c	   );
 
 /** strcmp - compare two strings */
-int			strcmp	(const char *s1,	const char *s2						);
+int             strcmp	(const char *s1,   const char *s2                  );
 
 /** strcpy - copy a string */
-char *		strcpy	(void *dest,		const char *src, 					);
+char *		strcpy	(      void *dest, const char *src                 );
 
 //TODO: Add strcoll
 
 //TODO: Add strcspn, strspn
 
 /** strdup - duplicate a string */
-void *		strdup	(const char *src										);
-
-/** strerror - get error message string */
-char *		strerror(int errnum												);
+void *		strdup	(                  const char *src                 );
 	
 /** strlen - get string length */
-size_t		strlen	(const char *src										);
+size_t		strlen	(                  const char *src                 );
+
+/** strerror - get error message string */
+char *		strerror( int errnum );
 	
 /** strncat - concatenate two strings */
-char *		strncat	(char *dest,		const char *src,			size_t n);
+char *		strncat	(      char *dest, const char *src,        size_t n);
 
 /** strncmp - compare two strings */
-int			strncmp	(const char *s1,	const char *s2				size_t n);
+int		strncmp	(const char *s1,   const char *s2,         size_t n);
 
 /** strncpy - copy a string */
-char *		strncpy	(void *dest,		const char *src, 			size_t n);
+char *		strncpy	(      void *dest, const char *src,        size_t n);
 	
 /** strchr - string scanning operation */
-char *		strrchr	(					const char *src,	int c			);
+char *		strrchr	(                  const char *src, int c           );
 
 //TODO: Add strpbrk
 
