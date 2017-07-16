@@ -48,12 +48,12 @@ size_t           strspn	(const char *s1,   const char *accept              )
 }
 
 /** strcspn - get number of prefix chars not in reject */
-int             strcspn	(const char *s1,   const char *reject              )
+size_t          strcspn	(const char *s1,   const char *reject              )
 {
 
 	const char *ap,*sp;
 	for ( sp = s1; *sp; sp++ ) {
-		for ( ap = accept; *ap; ap++ ) {
+		for ( ap = reject; *ap; ap++ ) {
 			if ( *ap == *sp )
 				break;
 		}
