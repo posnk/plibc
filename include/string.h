@@ -93,7 +93,8 @@ char *		strncpy	(      char *dest, const char *src,        size_t n);
 /** strrchr - string scanning operation */
 char *		strrchr	(                  const char *src, int c           );
 
-//TODO: Add strpbrk
+/** strpbrk -  scan a string for a byte */
+char *          strpbrk	(const char *s1,   const char *s2                  );
 
 //TODO: Add strstr
 

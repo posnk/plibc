@@ -55,6 +55,7 @@ OBJS = $(BUILDDIR)stdlib/base64.o \
 	$(BUILDDIR)string/strncmp.o \
 	$(BUILDDIR)string/strncpy.o \
 	$(BUILDDIR)string/strrchr.o \
+	$(BUILDDIR)string/strpbrk.o \
 #	$(BUILDDIR)nonstd/numfmt.o \
 #	$(BUILDDIR)stdio/printf.o \
 #$(BUILDDIR)file.o \
