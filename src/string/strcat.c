@@ -31,10 +31,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 /** strcat - concatenate strings */
 char *		strcat	(      char *dest, const char *src                 )
 {	
+	char *d;
 
-	while ( *dest++ );
+	d = dest;
 
-	while ( ( *dest++ = *src++ ) );
+	while ( *d++ );
+
+	while ( ( *d++ = *src++ ) );
 	
 	return dest;
 
