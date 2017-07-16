@@ -35,7 +35,7 @@ char *		strchr	(                  const char *src, int c	   )
 	
 	for ( _c = c; *src; src++ )
 		if ( *src == _c )
-			return src;
+			return ( char * ) src;
 		
 	return NULL;
 
