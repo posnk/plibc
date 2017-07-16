@@ -39,6 +39,7 @@ LIBS = -lgcc
 OBJS = $(BUILDDIR)stdlib/base64.o \
 	$(BUILDDIR)stdlib/math.o \
 	$(BUILDDIR)stdlib/strtoint.o \
+	$(BUILDDIR)string/memccpy.o \
 	$(BUILDDIR)string/memcpy.o \
 	$(BUILDDIR)string/memcmp.o \
 	$(BUILDDIR)string/memmove.o \

@@ -17,7 +17,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 \******************************************************************************/
 
 /**
- * @file string/strcpy.c
+ * @file string/memccpy.c
  *
  * Part of plibc
  *
@@ -28,18 +28,14 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include <plcconfig.h>
 #include <string.h>
 
-/** memccpy - copy bytes in memory */
-void *		memccpy	(void *dest,       const void *src, int c, size_t n)
+/** memccpy - copy a string */
+char *		memmcpy	(      char *dest, const char *src                 )
 {	
 	char *d;
-	const char *s;
-	char _c;
-	
-	_c = ( char ) c;
-	d = ( char * ) dest;
-	s = ( const char * ) src;
 
-	while ( ( *d++ = *s++ ) != _c );
+	d = dest;
+
+	while ( ( *d++ = *src++ ) );
 	
 	return dest;
 
