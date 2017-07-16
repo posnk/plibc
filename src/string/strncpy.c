@@ -29,7 +29,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #include <string.h>
 
 /** strncpy - copy a string */
-char *		strncpy	(      char *dest, const char *src                 )
+char *		strncpy	(      char *dest, const char *src,        size_t n)
 {	
 
 	size_t p;

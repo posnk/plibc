@@ -88,9 +88,9 @@ char *		strncat	(      char *dest, const char *src,        size_t n);
 int		strncmp	(const char *s1,   const char *s2,         size_t n);
 
 /** strncpy - copy a string */
-char *		strncpy	(      void *dest, const char *src,        size_t n);
+char *		strncpy	(      char *dest, const char *src,        size_t n);
 	
-/** strchr - string scanning operation */
+/** strrchr - string scanning operation */
 char *		strrchr	(                  const char *src, int c           );
 
 //TODO: Add strpbrk
@@ -98,8 +98,8 @@ char *		strrchr	(                  const char *src, int c           );
 //TODO: Add strstr
 
 /** strtok, strtok_r - split string into tokens */
-char *		strtok	(char *s,			const char *delim					);
-char *		strtok_r(char *s,			const char *delim					);
+char *		strtok	(char *s,			const char *delim   );
+char *		strtok_r(char *s,			const char *delim   ); 
 
 //TODO: Add strxfrm
 	
