@@ -94,14 +94,14 @@ char *		strncpy	(      char *dest, const char *src,        size_t n);
 char *		strrchr	(                  const char *src, int c           );
 
 /** strpbrk -  scan a string for a byte */
-char *          strpbrk	(const char *s1,   const char *s2                  );
+char *          strpbrk	(const char *s1,   const char *s2                   );
 
 /** strstr  -  scan a string for a string */
-char *          strstr	(const char *s1,   const char *s2                  );
+char *          strstr	(const char *s1,   const char *s2                   );
 
 /** strtok, strtok_r - split string into tokens */
-char *		strtok	(char *s,			const char *delim   );
-char *		strtok_r(char *s,			const char *delim   ); 
+char *		strtok	(char *s,          const char *delim                );
+char *		strtok_r(char *s,          const char *delim, char **lasts  ); 
 
 //TODO: Add strxfrm
 	
