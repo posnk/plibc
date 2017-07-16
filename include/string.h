@@ -67,13 +67,13 @@ char *		strcpy	(      char *dest, const char *src                 );
 #define		strcoll	strcmp
 
 /** strspn - get number of prefix chars in accept */
-int             strspn	(const char *s1,   const char *accept              );
+size_t           strspn	(const char *s1,   const char *accept              );
 
 /** strcspn - get number of prefix chars not in reject */
-int             strcspn	(const char *s1,   const char *reject              );
+size_t          strcspn	(const char *s1,   const char *reject              );
 
 /** strdup - duplicate a string */
-void *		strdup	(                  const char *src                 );
+char *		strdup	(                  const char *src                 );
 	
 /** strlen - get string length */
 size_t		strlen	(                  const char *src                 );
