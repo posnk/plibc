@@ -96,7 +96,8 @@ char *		strrchr	(                  const char *src, int c           );
 /** strpbrk -  scan a string for a byte */
 char *          strpbrk	(const char *s1,   const char *s2                  );
 
-//TODO: Add strstr
+/** strstr  -  scan a string for a string */
+char *          strstr	(const char *s1,   const char *s2                  );
 
 /** strtok, strtok_r - split string into tokens */
 char *		strtok	(char *s,			const char *delim   );
